@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'website/style.css' %}" />
+  </head>
+  <title></title>
+  <body>
+   <!-- Image and text -->
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="{%url 'website:index'%}">
+         
+      Online Book Store </a>
+    </nav>
+
+
+    {% block body %}
+
+    {% endblock  %}
+  </body>
+<br>
+<!-- Footer -->
+<footer class="page-footer font-dark">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> Online Book Store</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</html>

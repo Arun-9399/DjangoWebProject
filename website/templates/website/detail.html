@@ -1,0 +1,24 @@
+{% extends 'website/base.html' %} {% block body %}
+<br>
+
+    
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{book.book_image.url}}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{book.name}}</h5>
+        <p class="card-text">{{book.desc}}</p>
+        <p class="card-text"><small class="text-muted">{{book.price}}&#8377;</small></p>
+        <a class="btn btn-warning" href="{%url 'website:update' book.id%}">Update</a>
+        <a class="btn btn-danger" href="{%url 'website:delete' book.id%}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

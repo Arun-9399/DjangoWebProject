@@ -1,0 +1,24 @@
+{% extends 'website/base.html' %}
+
+{% block body %}
+<br>
+     <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col-12">
+        <label for="name">Name of Book:</label>
+        <input type="text" class="form-control" name="name" id ="name" placeholder="Enter the Book Name">
+        <br>
+        <label for="desc">Description of Book:</label>
+        <input type="text" class="form-control" name="desc" id ="desc" placeholder="Enter the  Book Description">
+        <br>
+        <label for="price">Price of Book:</label>
+        <input type="text" class="form-control" name="price" id ="price" placeholder="Enter the Book Price">
+        <br>
+        <label for="book_image">Upload Image of Book:</label>
+        <input type="file" class="form-control" name="book_image" id ="book_image">
+        <br>
+        <input type="submit" class="btn btn-primary mb-2" name="" id="">
+        </div>
+      </form>
+
+{% endblock body %}
